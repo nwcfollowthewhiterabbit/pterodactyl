@@ -7,7 +7,7 @@ if [ -z "$server_dns_name" ]; then
   exit 1
 fi
 # Файл конфигурации nginx (Pterodactyl.conf), который нужно отредактировать
-NGINX_CONF_FILE="/etc/nginx/sites-available/Pterodactyl.conf"
+NGINX_CONF_FILE="/etc/nginx/sites-available/pterodactyl-without-ssl.conf"
 # Выполнить замену значения в файле конфигурации nginx
 sed -i "s/server_name <domain>;$/server_name $server_dns_name;/" "$NGINX_CONF_FILE"
 # Проверить, была ли замена успешной
