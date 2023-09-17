@@ -30,7 +30,7 @@ cp pteroq.service /etc/systemd/system/
 systemctl enable --now redis-server
 systemctl enable --now pteroq.service
 rm /etc/nginx/sites-enabled/default
-cp pterodactyl.conf /etc/nginx/sites-avaible/
+cp pterodactyl-without-ssl.conf /etc/nginx/sites-avaible/pterodactyl.conf
 sh edit-pterodactyl.conf.sh
 sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/pterodactyl.conf
 systemctl restart nginx
