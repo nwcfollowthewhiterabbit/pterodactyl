@@ -7,6 +7,10 @@ apt update
 apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server  tar unzip git redis-server
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 mkdir -p /var/www/pterodactyl
+mv create-db.sh /var/www/pterodactyl/
+cmv env-edit.sh /var/www/pterodactyl/
+mv cron-add.sh /var/www/pterodactyl/
+mv edit-pterodactyl.conf.sh /var/www/pterodactyl/
 cd /var/www/pterodactyl
 curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz
 tar -xzvf panel.tar.gz
