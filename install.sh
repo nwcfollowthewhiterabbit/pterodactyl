@@ -8,7 +8,7 @@ apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,z
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 mkdir -p /var/www/pterodactyl
 mv create-db.sh /var/www/pterodactyl/
-cmv env-edit.sh /var/www/pterodactyl/
+mv env-edit.sh /var/www/pterodactyl/
 mv cron-add.sh /var/www/pterodactyl/
 mv edit-pterodactyl.conf.sh /var/www/pterodactyl/
 cd /var/www/pterodactyl
